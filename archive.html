@@ -14,16 +14,28 @@
                 <img src="logo.png" alt="Chantilly Math Club Logo" class="h-10">
                 <span class="text-xl font-bold">Chantilly Math Competition</span>
             </a>
-            <div class="space-x-6">
-                <a href="information.html" class="hover:text-gray-300">Information</a>
-                <a href="registration.html" class="hover:text-gray-300">Registration</a>
-                <a href="archive.html" class="hover:text-gray-300">Archive</a>
-                <a href="team.html" class="hover:text-gray-300">Our Team</a>
-                <a href="contact.html" class="hover:text-gray-300">Contact Us</a>
-                <a href="sponsors.html" class="hover:text-gray-300">Sponsors</a>
+            <div class="relative">
+                <button id="menu-toggle" class="md:hidden text-white text-2xl">
+                    ☰
+                </button>
+                <div id="menu" class="hidden md:flex space-x-6 flex-col md:flex-row absolute right-0 top-10 bg-purple-700 md:bg-transparent w-48 md:w-auto p-4 md:p-0 shadow-lg rounded-md">
+                    <br>
+                    <a href="information.html" class="hover:text-gray-300 block md:inline text-center">Information</a>
+                    <a href="registration.html" class="hover:text-gray-300 block md:inline text-center">Registration</a>
+                    <a href="archive.html" class="hover:text-gray-300 block md:inline text-center">Archive</a>
+                    <a href="team.html" class="hover:text-gray-300 block md:inline text-center">Our Team</a>
+                    <a href="contact.html" class="hover:text-gray-300 block md:inline text-center">Contact Us</a>
+                    <a href="sponsors.html" class="hover:text-gray-300 block md:inline text-center">Sponsors</a>
+                </div>
             </div>
         </div>
     </nav>
+
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            document.getElementById('menu').classList.toggle('hidden');
+        });
+    </script>
 
     <!-- Archive Section -->
     <section class="flex-grow container mx-auto px-6 py-16 text-center">
