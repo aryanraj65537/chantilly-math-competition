@@ -1,1 +1,1 @@
-# chantillymath.xyz
+# chantilly-math-competition
