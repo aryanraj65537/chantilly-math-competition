@@ -5,16 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Archive - Chantilly Math Competition</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background-color: #6A0DAD;
+            width: 100%;
+            z-index: 50;
+        }
+        .dropdown-menu.active {
+            display: block;
+        }
+    </style>
 </head>
 <body class="bg-white text-gray-900 min-h-screen flex flex-col">
     <!-- Navbar -->
-    <nav class="bg-purple-700 text-white p-4 shadow-lg">
+    <nav class="bg-purple-700 text-white p-4 shadow-lg relative">
         <div class="container mx-auto flex justify-between items-center">
             <a href="index.html" class="flex items-center space-x-3">
                 <img src="logo.png" alt="Chantilly Math Club Logo" class="h-10">
                 <span class="text-xl font-bold">Chantilly Math Competition</span>
             </a>
-            <div class="space-x-6">
+            
+            <div class="hidden md:flex space-x-6">
                 <a href="information.html" class="hover:text-gray-300">Information</a>
                 <a href="registration.html" class="hover:text-gray-300">Registration</a>
                 <a href="archive.html" class="hover:text-gray-300">Archive</a>
@@ -22,6 +37,21 @@
                 <a href="contact.html" class="hover:text-gray-300">Contact Us</a>
                 <a href="sponsors.html" class="hover:text-gray-300">Sponsors</a>
             </div>
+            
+            <button id="menu-toggle" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        
+        <div id="dropdown-menu" class="dropdown-menu md:hidden text-white p-4 space-y-2">
+            <a href="information.html" class="block hover:text-gray-300">Information</a>
+            <a href="registration.html" class="block hover:text-gray-300">Registration</a>
+            <a href="archive.html" class="block hover:text-gray-300">Archive</a>
+            <a href="team.html" class="block hover:text-gray-300">Our Team</a>
+            <a href="contact.html" class="block hover:text-gray-300">Contact Us</a>
+            <a href="sponsors.html" class="block hover:text-gray-300">Sponsors</a>
         </div>
     </nav>
 
@@ -74,5 +104,11 @@
     <footer class="bg-purple-700 text-white text-center p-4">
         <p>&copy; 2025 Chantilly Math Club. All rights reserved.</p>
     </footer>
+
+    <script>
+        document.getElementById("menu-toggle").addEventListener("click", function() {
+            document.getElementById("dropdown-menu").classList.toggle("active");
+        });
+    </script>
 </body>
 </html>
