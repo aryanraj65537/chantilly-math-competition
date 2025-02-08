@@ -57,19 +57,19 @@
         </div>
     </nav>
 
-    <!-- Title Section -->
-    <section class="container mx-auto pt-16 text-center">
+        <!-- Title Section - Add padding-bottom -->
+    <section class="container mx-auto pt-16 pb-8 text-center">  <!-- Added pb-8 -->
         <h1 class="text-4xl font-bold text-purple-700">Contact Us</h1>
         <p class="text-lg mt-4">We&#039;d love to hear from you! Feel free to reach out with any questions or inquiries.</p>
     </section>
-    
-        <!-- Contact Section -->
-    <div class="flex-grow flex flex-col justify-center items-center text-center w-full px-6">
-        <section class="flex flex-col items-center justify-center w-full">
+
+    <!-- Contact Section - Remove justify-center -->
+    <div class="flex-grow flex flex-col items-center text-center w-full px-6">  <!-- Removed justify-center -->
+        <section class="flex flex-col items-center w-full">
             <div class="w-full max-w-4xl">
-                <!-- Mail icon with adjusted positioning -->
-                <div class="mb-4 -mt-4">  <!-- Negative top margin brings it closer to text above -->
-                    <i class="bi bi-envelope-fill text-[200px] text-purple-600"></i>  <!-- Doubled size -->
+                <!-- Icon container with negative margin -->
+                <div class="-mt-6 mb-2">  <!-- Pulls icon up -->
+                    <i class="bi bi-envelope-fill text-[150px] text-purple-600"></i>  <!-- Larger size -->
                 </div>
                 <p class="text-2xl text-gray-700">Email us at:</p>
                 <a href="mailto:chsmathcc@gmail.com" class="text-3xl font-bold text-purple-600 mt-4 block w-full break-words">chsmathcc@gmail.com</a>
